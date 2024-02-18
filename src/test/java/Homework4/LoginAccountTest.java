@@ -4,9 +4,11 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CreateAccountTest extends TestBase{
+public class LoginAccountTest extends TestBase {
+
   @Test
-  public void createNewAccountPositiveTest(){
+  public void loginExistAccountPositiveTest() {
+    driver.findElement(By.cssSelector("[href='/login")).click();
     driver.findElement(By.cssSelector(".button-1.login-button")).click();
     driver.findElement(By.name("Email")).click();
     driver.findElement(By.name("Email")).clear();
